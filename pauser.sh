@@ -16,9 +16,10 @@ done
 
 while :
 do
-    r=`expr $RANDOM + 10000`
+    r=$RANDOM
     r=`expr $r / 1000`
-    r=`expr $r % 30`
+    r=`expr $r % 20`
+    r=`expr $r + 10`
     echo "sleep $r sec"
     sleep $r
     r=`expr $RANDOM % $count`
@@ -26,9 +27,9 @@ do
     echo "pause pid ${!r}"
     pid=$r
     kill -s SIGSTOP ${!pid}
-    r=`expr $RANDOM + 3000`
     r=`expr $r / 1000`
     r=`expr $r % 10`
+    r=`expr $r + 10`
     echo "continue after $r sec"
     sleep $r
     kill -s SIGCONT ${!pid}
