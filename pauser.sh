@@ -16,7 +16,7 @@ done
 
 while :
 do
-    r=`expr $RANDOM + 3000`
+    r=`expr $RANDOM + 10000`
     r=`expr $r / 1000`
     r=`expr $r % 30`
     echo "sleep $r sec"
