@@ -2,7 +2,7 @@
 if [ $# == 0 ]
 then
     echo "usage: <pids>..."
-exit
+    exit
 fi
 
 count=$#
